@@ -6,7 +6,7 @@ import { Phone } from "lucide-react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import Button from "@/components/ui/Button";
 import FloatingParticles from "@/components/ui/FloatingParticles";
-import { SALON_INFO } from "@/lib/constants";
+import { SALON_INFO, img } from "@/lib/constants";
 
 export default function CTASection() {
   const ref = useRef(null);
@@ -26,7 +26,7 @@ export default function CTASection() {
       {/* Parallax Background */}
       <motion.div className="absolute inset-0 will-change-transform" style={{ y: bgY }}>
         <img
-          src="/images/concept/interior.png"
+          src={img("/images/concept/interior.png")}
           alt=""
           loading="lazy"
           className="w-full h-[130%] object-cover"

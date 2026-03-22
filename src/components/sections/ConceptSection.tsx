@@ -7,6 +7,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import ParallaxImage from "@/components/ui/ParallaxImage";
 import TextReveal from "@/components/ui/TextReveal";
 import { fadeInLeft, fadeInRight } from "@/lib/animations";
+import { img } from "@/lib/constants";
 
 export default function ConceptSection() {
   const sectionRef = useRef(null);
@@ -31,7 +32,7 @@ export default function ConceptSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 items-center mb-16 md:mb-32">
           <ScrollReveal variants={fadeInLeft}>
             <ParallaxImage
-              src="/images/concept/concept-1.png"
+              src={img("/images/concept/concept-1.png")}
               alt="シャンプーブース"
               className="aspect-square"
               speed={0.2}
@@ -64,7 +65,7 @@ export default function ConceptSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 items-center">
           <ScrollReveal variants={fadeInLeft} className="md:order-2">
             <ParallaxImage
-              src="/images/concept/concept-2.png"
+              src={img("/images/concept/concept-2.png")}
               alt="待合スペース"
               className="aspect-square"
               speed={0.2}

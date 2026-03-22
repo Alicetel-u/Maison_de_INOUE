@@ -1,5 +1,8 @@
 import { MenuCategory, StaffMember, GalleryItem, SalonInfo } from "@/types";
 
+const BASE = process.env.NODE_ENV === "production" ? "/Maison_de_INOUE" : "";
+export const img = (path: string) => `${BASE}${path}`;
+
 export const SALON_INFO: SalonInfo = {
   name: "Maison de INOUE",
   nameJa: "メゾン ド イノウエ",
@@ -90,7 +93,7 @@ export const STAFF_MEMBERS: StaffMember[] = [
     experience: "経歴15年",
     message: "一人ひとりの\"なりたい\"を、確かな技術で叶えます。お客様の内面の美しさを引き出すことが私の喜びです。",
     specialties: ["ショートカット", "ハイトーンカラー", "髪質改善"],
-    image: "/images/staff/staff-1.png",
+    image: img("/images/staff/staff-1.png"),
   },
   {
     name: "佐藤 健太",
@@ -99,7 +102,7 @@ export const STAFF_MEMBERS: StaffMember[] = [
     experience: "経歴8年",
     message: "トレンドとライフスタイルに合わせた、再現性の高いスタイルをご提案します。",
     specialties: ["メンズカット", "ナチュラルパーマ", "バレイヤージュ"],
-    image: "/images/staff/staff-2.png",
+    image: img("/images/staff/staff-2.png"),
   },
   {
     name: "鈴木 あかり",
@@ -108,24 +111,24 @@ export const STAFF_MEMBERS: StaffMember[] = [
     experience: "経歴5年",
     message: "透明感のある、あなただけの色を見つけます。ダメージレスなカラーリングにこだわっています。",
     specialties: ["バレイヤージュ", "インナーカラー", "ブリーチワーク"],
-    image: "/images/staff/staff-3.png",
+    image: img("/images/staff/staff-3.png"),
   },
 ];
 
 export const GALLERY_ITEMS: GalleryItem[] = [
-  { image: "/images/gallery/style-1.png", styleName: "レイヤーボブ", stylist: "田中 美咲" },
-  { image: "/images/gallery/style-2.png", styleName: "ストレートロング", stylist: "鈴木 あかり" },
-  { image: "/images/gallery/style-3.png", styleName: "アップスタイル", stylist: "田中 美咲" },
-  { image: "/images/gallery/style-4.png", styleName: "ショートピクシー", stylist: "佐藤 健太" },
-  { image: "/images/gallery/style-5.png", styleName: "ウェーブミディ", stylist: "鈴木 あかり" },
-  { image: "/images/gallery/style-6.png", styleName: "ナチュラルパーマ", stylist: "佐藤 健太" },
+  { image: img("/images/gallery/style-1.png"), styleName: "レイヤーボブ", stylist: "田中 美咲" },
+  { image: img("/images/gallery/style-2.png"), styleName: "ストレートロング", stylist: "鈴木 あかり" },
+  { image: img("/images/gallery/style-3.png"), styleName: "アップスタイル", stylist: "田中 美咲" },
+  { image: img("/images/gallery/style-4.png"), styleName: "ショートピクシー", stylist: "佐藤 健太" },
+  { image: img("/images/gallery/style-5.png"), styleName: "ウェーブミディ", stylist: "鈴木 あかり" },
+  { image: img("/images/gallery/style-6.png"), styleName: "ナチュラルパーマ", stylist: "佐藤 健太" },
 ];
 
 export const INSTAGRAM_POSTS = [
-  { image: "/images/instagram/insta-1.png", likes: 124 },
-  { image: "/images/instagram/insta-2.png", likes: 89 },
-  { image: "/images/instagram/insta-3.png", likes: 203 },
-  { image: "/images/instagram/insta-4.png", likes: 156 },
-  { image: "/images/instagram/insta-5.png", likes: 178 },
-  { image: "/images/instagram/insta-6.png", likes: 95 },
+  { image: img("/images/instagram/insta-1.png"), likes: 124 },
+  { image: img("/images/instagram/insta-2.png"), likes: 89 },
+  { image: img("/images/instagram/insta-3.png"), likes: 203 },
+  { image: img("/images/instagram/insta-4.png"), likes: 156 },
+  { image: img("/images/instagram/insta-5.png"), likes: 178 },
+  { image: img("/images/instagram/insta-6.png"), likes: 95 },
 ];

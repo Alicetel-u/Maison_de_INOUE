@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import FloatingParticles from "@/components/ui/FloatingParticles";
+import { img } from "@/lib/constants";
 
 export default function HeroSection() {
   const ref = useRef(null);
@@ -25,9 +26,9 @@ export default function HeroSection() {
         style={{ y: bgY, scale: bgScale }}
       >
         <picture>
-          <source media="(min-width: 768px)" srcSet="/images/hero/hero-main.png" />
+          <source media="(min-width: 768px)" srcSet={img("/images/hero/hero-main.png")} />
           <img
-            src="/images/hero/hero-mobile.png"
+            src={img("/images/hero/hero-mobile.png")}
             alt="Maison de INOUE サロン内観"
             className="w-full h-full object-cover"
             fetchPriority="high"
