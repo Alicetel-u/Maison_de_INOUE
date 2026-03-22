@@ -19,7 +19,7 @@ export default function AccessSection({ salon }: { salon?: SalonInfo }) {
           <ScrollReveal variants={fadeInLeft}>
             <div className="aspect-[4/3] md:aspect-[4/3] bg-salon-gray/20 overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.169023401053!2d139.7071513!3d35.6654861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca40c2e58c7%3A0xc7e39d8e0fcabc23!2z6KGo5Y-C6YGT!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
+                src="https://maps.google.com/maps?q=%E5%9F%BC%E7%8E%89%E7%9C%8C%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE%E5%B8%82%E5%8D%97%E5%8C%BA%E6%96%87%E8%94%B52-1-4+%E3%82%B5%E3%82%AF%E3%83%A9%E3%83%93%E3%83%AB&output=embed&hl=ja&z=17"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
