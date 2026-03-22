@@ -8,7 +8,7 @@ export const SALON_INFO: SalonInfo = {
   nameJa: "メゾン ド イノウエ",
   address: "埼玉県さいたま市南区文蔵2-1-4 サクラビル1F",
   zip: "〒336-0025",
-  tel: "048-XXX-XXXX",
+  tel: "048-789-6461",
   hours: [
     { label: "平日", time: "10:00 - 20:00" },
     { label: "土日祝", time: "9:00 - 19:00" },
