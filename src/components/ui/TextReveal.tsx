@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { useIsMobile } from "@/lib/useIsMobile";
 
 interface TextRevealProps {
   text: string;
@@ -18,6 +19,11 @@ export default function TextReveal({
 }: TextRevealProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const isMobile = useIsMobile();
+
+  if (isMobile) {
+    return <span className={className}>{text}</span>;
+  }
 
   return (
     <span ref={ref} className={`inline-block ${className}`}>

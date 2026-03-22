@@ -2,6 +2,7 @@
 
 import { motion, Variants, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useIsMobile } from "@/lib/useIsMobile";
 
 interface ScrollRevealProps {
   children: React.ReactNode;
@@ -18,6 +19,11 @@ export default function ScrollReveal({
 }: ScrollRevealProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
+  const isMobile = useIsMobile();
+
+  if (isMobile) {
+    return <div className={className}>{children}</div>;
+  }
 
   const defaultVariants: Variants = {
     hidden: { opacity: 0, y: 40 },
