@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80">
+  <!-- Decorative top flourish -->
+  <path d="M100 14 Q120 4 140 10 Q155 14 170 9 Q180 6 190 9 Q205 14 220 10 Q240 4 260 14"
+        fill="none" stroke="#C4A36E" stroke-width="0.8" opacity="0.6"/>
+
+  <!-- Main title: Maison de INOUE (unified) -->
+  <text x="180" y="46"
+    font-family="Cormorant Garamond, Georgia, serif"
+    font-size="30" font-weight="600"
+    fill="#2C2C2C" text-anchor="middle"
+    letter-spacing="3">Maison de INOUE</text>
+
+  <!-- Gold line left -->
+  <line x1="50" y1="55" x2="150" y2="55" stroke="#C4A36E" stroke-width="0.6"/>
+  <!-- Diamond center -->
+  <polygon points="180,51 184,55 180,59 176,55" fill="#C4A36E"/>
+  <!-- Gold line right -->
+  <line x1="210" y1="55" x2="310" y2="55" stroke="#C4A36E" stroke-width="0.6"/>
+
+  <!-- Tagline -->
+  <text x="180" y="70"
+    font-family="Cormorant Garamond, Georgia, serif"
+    font-size="8" font-weight="300"
+    fill="#9C9C9C" text-anchor="middle"
+    letter-spacing="5">PRIVATE HAIR SALON</text>
+
+  <!-- Decorative bottom flourish -->
+  <path d="M100 76 Q120 86 140 80 Q155 76 170 81 Q180 84 190 81 Q205 76 220 80 Q240 86 260 76"
+        fill="none" stroke="#C4A36E" stroke-width="0.8" opacity="0.6"/>
+</svg>

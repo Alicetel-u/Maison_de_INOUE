@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-salon-beige: #F5F0EB;
+  --color-salon-charcoal: #2C2C2C;
+  --color-salon-gold: #C4A36E;
+  --color-salon-white: #FEFEFE;
+  --color-salon-pink: #F8E8E0;
+  --color-salon-gray: #9C9C9C;
+  --color-salon-light: #FAF8F5;
+
+  --font-serif: "Cormorant Garamond", "Noto Serif JP", serif;
+  --font-sans: "Noto Sans JP", sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  cursor: none;
+}
+
+@media (pointer: coarse) {
+  html {
+    cursor: auto;
+  }
+}
+
+body {
+  background: var(--color-salon-white);
+  color: var(--color-salon-charcoal);
+  font-family: "Noto Sans JP", sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-salon-gold);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-salon-beige);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-salon-gold);
+  border-radius: 3px;
+}
+
+/* Smooth image loading */
+img {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+/* Link & button cursor override for custom cursor */
+a, button, [role="button"] {
+  cursor: none;
+}
+
+@media (pointer: coarse) {
+  a, button, [role="button"] {
+    cursor: pointer;
+  }
+}
