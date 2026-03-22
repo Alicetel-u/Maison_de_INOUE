@@ -19,7 +19,7 @@ export default function AccessSection({ salon }: { salon?: SalonInfo }) {
           <ScrollReveal variants={fadeInLeft}>
             <div className="aspect-[4/3] md:aspect-[4/3] bg-salon-gray/20 overflow-hidden">
               <iframe
-                src="https://maps.google.com/maps?q=35.85278,139.65944+(Maison+de+INOUE)&z=17&output=embed&hl=ja"
+                src="https://www.google.com/maps?q=%E5%9F%BC%E7%8E%89%E7%9C%8C%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE%E5%B8%82%E5%8D%97%E5%8C%BA%E6%96%87%E8%94%B52-1-4&z=16&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
