@@ -1,7 +1,9 @@
 import { Instagram } from "lucide-react";
 import { SALON_INFO, NAV_LINKS } from "@/lib/constants";
+import type { SalonInfo } from "@/types";
 
-export default function Footer() {
+export default function Footer({ salon }: { salon?: SalonInfo }) {
+  const info = salon || SALON_INFO;
   return (
     <footer className="bg-salon-charcoal text-white py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
@@ -56,22 +58,22 @@ export default function Footer() {
               INFORMATION
             </h4>
             <div className="space-y-2 text-sm text-white/70">
-              <p>{SALON_INFO.zip}</p>
-              <p>{SALON_INFO.address}</p>
-              <p className="mt-3">TEL: {SALON_INFO.tel}</p>
-              {SALON_INFO.hours.map((h) => (
+              <p>{info.zip}</p>
+              <p>{info.address}</p>
+              <p className="mt-3">TEL: {info.tel}</p>
+              {info.hours.map((h) => (
                 <p key={h.label}>
                   {h.label}: {h.time}
                 </p>
               ))}
-              <p>定休日: {SALON_INFO.closedDays}</p>
+              <p>定休日: {info.closedDays}</p>
             </div>
           </div>
         </div>
 
         <div className="mt-16 pt-8 border-t border-white/10 text-center">
           <p className="text-xs text-white/30 tracking-wider">
-            &copy; 2025 {SALON_INFO.name}. All rights reserved.
+            &copy; 2025 {info.name}. All rights reserved.
           </p>
         </div>
       </div>

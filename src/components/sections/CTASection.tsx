@@ -7,8 +7,10 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import Button from "@/components/ui/Button";
 import FloatingParticles from "@/components/ui/FloatingParticles";
 import { SALON_INFO, img } from "@/lib/constants";
+import type { SalonInfo } from "@/types";
 
-export default function CTASection() {
+export default function CTASection({ salon }: { salon?: SalonInfo }) {
+  const info = salon || SALON_INFO;
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -67,11 +69,11 @@ export default function CTASection() {
 
           {/* Phone */}
           <motion.a
-            href={`tel:${SALON_INFO.tel.replace(/-/g, "")}`}
+            href={`tel:${info.tel.replace(/-/g, "")}`}
             className="inline-flex items-center justify-center gap-2 md:gap-3 mb-8 md:mb-10 p-3 min-h-[44px]"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
-            aria-label={`電話: ${SALON_INFO.tel}`}
+            aria-label={`電話: ${info.tel}`}
           >
             <motion.div
               animate={{ rotate: [0, 10, -10, 0] }}
@@ -80,7 +82,7 @@ export default function CTASection() {
               <Phone size={16} className="text-salon-gold" />
             </motion.div>
             <span className="font-display text-xl sm:text-2xl md:text-3xl tracking-[0.1em] md:tracking-[0.15em] text-white hover:text-salon-gold transition-colors">
-              {SALON_INFO.tel}
+              {info.tel}
             </span>
           </motion.a>
 

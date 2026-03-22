@@ -5,8 +5,10 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { fadeInLeft, fadeInRight } from "@/lib/animations";
 import { SALON_INFO } from "@/lib/constants";
+import type { SalonInfo } from "@/types";
 
-export default function AccessSection() {
+export default function AccessSection({ salon }: { salon?: SalonInfo }) {
+  const info = salon || SALON_INFO;
   return (
     <section id="access" className="py-20 md:py-32 bg-salon-beige">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
@@ -34,10 +36,10 @@ export default function AccessSection() {
             <div className="flex flex-col justify-center space-y-6 md:space-y-8">
               <div>
                 <h3 className="font-display text-2xl md:text-3xl font-light tracking-[0.15em] md:tracking-[0.2em]">
-                  {SALON_INFO.name}
+                  {info.name}
                 </h3>
                 <p className="text-xs tracking-wider text-salon-gray mt-1">
-                  {SALON_INFO.nameJa} — PRIVATE HAIR SALON
+                  {info.nameJa} — PRIVATE HAIR SALON
                 </p>
               </div>
 
@@ -45,37 +47,37 @@ export default function AccessSection() {
                 <div className="flex gap-3 md:gap-4">
                   <MapPin size={18} className="text-salon-gold flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-sm font-light">{SALON_INFO.zip}</p>
-                    <p className="text-sm font-light">{SALON_INFO.address}</p>
+                    <p className="text-sm font-light">{info.zip}</p>
+                    <p className="text-sm font-light">{info.address}</p>
                   </div>
                 </div>
 
                 <div className="flex gap-3 md:gap-4">
                   <Clock size={18} className="text-salon-gold flex-shrink-0 mt-0.5" />
                   <div className="space-y-1">
-                    {SALON_INFO.hours.map((h) => (
+                    {info.hours.map((h) => (
                       <p key={h.label} className="text-sm font-light">
                         {h.label}: {h.time}
                       </p>
                     ))}
                     <p className="text-sm font-light text-salon-gray">
-                      定休日: {SALON_INFO.closedDays}
+                      定休日: {info.closedDays}
                     </p>
                   </div>
                 </div>
 
                 <a
-                  href={`tel:${SALON_INFO.tel.replace(/-/g, "")}`}
+                  href={`tel:${info.tel.replace(/-/g, "")}`}
                   className="flex gap-3 md:gap-4 items-center min-h-[44px] hover:text-salon-gold transition-colors"
-                  aria-label={`電話: ${SALON_INFO.tel}`}
+                  aria-label={`電話: ${info.tel}`}
                 >
                   <PhoneIcon size={18} className="text-salon-gold flex-shrink-0" />
-                  <span className="text-sm font-light">{SALON_INFO.tel}</span>
+                  <span className="text-sm font-light">{info.tel}</span>
                 </a>
 
                 <div className="flex gap-3 md:gap-4">
                   <Train size={18} className="text-salon-gold flex-shrink-0 mt-0.5" />
-                  <p className="text-sm font-light">{SALON_INFO.access}</p>
+                  <p className="text-sm font-light">{info.access}</p>
                 </div>
               </div>
             </div>

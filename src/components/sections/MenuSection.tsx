@@ -5,10 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { MENU_CATEGORIES } from "@/lib/constants";
+import type { MenuCategory } from "@/types";
 
-export default function MenuSection() {
-  const [activeTab, setActiveTab] = useState(MENU_CATEGORIES[0].id);
-  const activeCategory = MENU_CATEGORIES.find((c) => c.id === activeTab)!;
+export default function MenuSection({ categories }: { categories?: MenuCategory[] }) {
+  const data = categories || MENU_CATEGORIES;
+  const [activeTab, setActiveTab] = useState(data[0].id);
+  const activeCategory = data.find((c) => c.id === activeTab) || data[0];
 
   return (
     <section id="menu" className="py-20 md:py-32 bg-salon-light overflow-hidden">
@@ -18,7 +20,7 @@ export default function MenuSection() {
         {/* Tabs */}
         <ScrollReveal>
           <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2 md:gap-4 mb-10 md:mb-12">
-            {MENU_CATEGORIES.map((cat) => (
+            {data.map((cat) => (
               <motion.button
                 key={cat.id}
                 onClick={() => setActiveTab(cat.id)}

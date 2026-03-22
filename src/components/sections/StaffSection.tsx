@@ -5,8 +5,10 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { STAFF_MEMBERS } from "@/lib/constants";
 import { staggerContainer, fadeUp } from "@/lib/animations";
+import type { StaffMember } from "@/types";
 
-export default function StaffSection() {
+export default function StaffSection({ members }: { members?: StaffMember[] }) {
+  const data = members || STAFF_MEMBERS;
   return (
     <section id="staff" className="py-20 md:py-32 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
@@ -20,7 +22,7 @@ export default function StaffSection() {
             viewport={{ once: true }}
             className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12"
           >
-            {STAFF_MEMBERS.map((staff) => (
+            {data.map((staff) => (
               <motion.div
                 key={staff.nameEn}
                 variants={fadeUp}

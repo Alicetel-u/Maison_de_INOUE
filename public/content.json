@@ -1,0 +1,103 @@
+{
+  "salon": {
+    "name": "Maison de INOUE",
+    "nameJa": "メゾン ド イノウエ",
+    "address": "東京都渋谷区神宮前3-15-8 メゾンビル2F",
+    "zip": "〒150-0001",
+    "tel": "03-6455-XXXX",
+    "hours": [
+      { "label": "平日", "time": "10:00 - 20:00" },
+      { "label": "土日祝", "time": "9:00 - 19:00" }
+    ],
+    "closedDays": "毎週火曜日・第3月曜日",
+    "access": "東京メトロ 表参道駅 A2出口より徒歩3分"
+  },
+  "menu": [
+    {
+      "id": "cut",
+      "name": "カット",
+      "nameEn": "Cut",
+      "items": [
+        { "name": "カット", "price": "¥7,700", "description": "シャンプー・ブロー込み" },
+        { "name": "カット + ブロー", "price": "¥9,900", "description": "" },
+        { "name": "前髪カット", "price": "¥1,650", "description": "" },
+        { "name": "メンズカット", "price": "¥6,600", "description": "シャンプー・ブロー込み" },
+        { "name": "キッズカット", "price": "¥4,400", "description": "小学生以下" }
+      ]
+    },
+    {
+      "id": "color",
+      "name": "カラー",
+      "nameEn": "Color",
+      "items": [
+        { "name": "ワンカラー", "price": "¥8,800〜", "description": "リタッチ〜フルカラー" },
+        { "name": "ハイライト", "price": "¥11,000〜", "description": "" },
+        { "name": "バレイヤージュ", "price": "¥16,500〜", "description": "" },
+        { "name": "ダブルカラー", "price": "¥16,500〜", "description": "" },
+        { "name": "リタッチカラー", "price": "¥6,600〜", "description": "" }
+      ]
+    },
+    {
+      "id": "perm",
+      "name": "パーマ",
+      "nameEn": "Perm",
+      "items": [
+        { "name": "デジタルパーマ", "price": "¥13,200〜", "description": "" },
+        { "name": "コスメパーマ", "price": "¥11,000〜", "description": "" },
+        { "name": "ストレートパーマ", "price": "¥16,500〜", "description": "" },
+        { "name": "縮毛矯正", "price": "¥22,000〜", "description": "" }
+      ]
+    },
+    {
+      "id": "treatment",
+      "name": "トリートメント",
+      "nameEn": "Treatment",
+      "items": [
+        { "name": "超音波トリートメント", "price": "¥5,500", "description": "" },
+        { "name": "髪質改善トリートメント", "price": "¥11,000", "description": "話題の酸熱トリートメント" },
+        { "name": "ヘッドスパ", "price": "¥5,500", "description": "30分コース" },
+        { "name": "プレミアムヘッドスパ", "price": "¥8,800", "description": "60分コース" }
+      ]
+    },
+    {
+      "id": "set",
+      "name": "セットメニュー",
+      "nameEn": "Set Menu",
+      "items": [
+        { "name": "カット + カラー", "price": "¥14,300〜", "description": "" },
+        { "name": "カット + パーマ", "price": "¥18,700〜", "description": "" },
+        { "name": "カット + カラー + トリートメント", "price": "¥19,800〜", "description": "" },
+        { "name": "ブライダルセット", "price": "¥22,000〜", "description": "ヘアメイク込み" }
+      ]
+    }
+  ],
+  "staff": [
+    {
+      "name": "田中 美咲",
+      "nameEn": "Misaki Tanaka",
+      "role": "Owner Stylist",
+      "experience": "経歴15年",
+      "message": "一人ひとりの\"なりたい\"を、確かな技術で叶えます。お客様の内面の美しさを引き出すことが私の喜びです。",
+      "specialties": ["ショートカット", "ハイトーンカラー", "髪質改善"],
+      "image": "/images/staff/staff-1.png"
+    },
+    {
+      "name": "佐藤 健太",
+      "nameEn": "Kenta Sato",
+      "role": "Top Stylist",
+      "experience": "経歴8年",
+      "message": "トレンドとライフスタイルに合わせた、再現性の高いスタイルをご提案します。",
+      "specialties": ["メンズカット", "ナチュラルパーマ", "バレイヤージュ"],
+      "image": "/images/staff/staff-2.png"
+    },
+    {
+      "name": "鈴木 あかり",
+      "nameEn": "Akari Suzuki",
+      "role": "Colorist",
+      "experience": "経歴5年",
+      "message": "透明感のある、あなただけの色を見つけます。ダメージレスなカラーリングにこだわっています。",
+      "specialties": ["バレイヤージュ", "インナーカラー", "ブリーチワーク"],
+      "image": "/images/staff/staff-3.png"
+    }
+  ]
+}
