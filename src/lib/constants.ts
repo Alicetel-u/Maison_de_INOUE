@@ -31,11 +31,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
     name: "カット",
     nameEn: "Cut",
     items: [
-      { name: "カット", price: "¥7,700", description: "シャンプー・ブロー込み" },
-      { name: "カット + ブロー", price: "¥9,900" },
-      { name: "前髪カット", price: "¥1,650" },
-      { name: "メンズカット", price: "¥6,600", description: "シャンプー・ブロー込み" },
-      { name: "キッズカット", price: "¥4,400", description: "小学生以下" },
+      { name: "カット", price: "¥5,000" },
     ],
   },
   {
